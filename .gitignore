@@ -31,3 +31,9 @@
 *.out
 *.bin
 *.app
+
+# Python model cache
+*.pyc
+
+# My private dir
+sample/html/
