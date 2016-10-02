@@ -2,8 +2,8 @@
 # coding=utf-8
 import web
 
-urls = ( '/', 'index','/hello', 'hello', '/test*', 'test')
-
+urls = ( '/', 'index','/hello', 'hello', '/test*', 'test', '/template', 'greet')
+render = web.template.render('templates')
 def read_html(htmlfile):
     return open(htmlfile, 'rb').read()
 
@@ -14,6 +14,11 @@ class index:
 class hello:
     def GET(self):
         return "<h1><font color='red'>Hello World!</font><h1>"
+        # return read_html('index.html')
+
+class greet:
+    def GET(self):
+        return render.greeting("lizhiliong")
         # return read_html('index.html')
 
 class test():
