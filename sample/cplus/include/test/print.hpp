@@ -2,10 +2,10 @@
 #define PRINT_HPP_
 #include <iostream>
 
-template <typename Colection>
-void print(const Colection& col)
+template <typename Collection>
+void print(const Collection& coll)
 {
-  for (const auto& c: col) 
+  for (const auto& c: coll) 
     std::cout << c << std::endl;
 }
 
